@@ -133,6 +133,28 @@
     li:nth-child(2n){
         background-color: orangered;
     }
+    .using_before::before{
+        content: "Welcome";
+        color : orangered;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .using_before::after{
+        content: "Kamrul";
+        color: orchid;
+        font-weight: bold;
+        font-size: 50px;
+    }
+    body{
+        counter-reset:section;
+    }
+    .counter_use::before{
+        counter-increment:section;
+        content:"Crush" counter(section)": ";
+    }
+    .counter_use::after{
+        content:"😍";
+    }
     </style>
 </head>
 <body>
@@ -222,7 +244,7 @@
 <section>
 
 </section>
-<h1>My first Git Hub</h1>
+<h1 class="using_before">My first Git Hub</h1>
 <p>Hello World</p>
 
 <input name ="email" type="text">
@@ -237,6 +259,16 @@
 <li>shamim</li>
 <li>nirob</li>
 </ul>
+
+<div>
+<pclass="counter_use">Alia Batt</p>
+<p class="counter_use">sonakhi sina</p>
+<p class="counter_use">puja cheri</p>
+<p class="counter_use">pelisanda girl</p>
+<p class="counter_use">kajal agrawala</p>
+<p class="counter_use">Genali</p>
+<p class="counter_use">mahiamahi</p>
+</div>
 <footer></footer>
     
 </body>
